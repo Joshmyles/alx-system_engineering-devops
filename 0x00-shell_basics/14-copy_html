@@ -1,0 +1,18 @@
+#!/bin/bash
+
+current_dir=$(pwd)
+parent_dir=$(dirname "$current_dir")
+for file in *.html; do
+    if [ -f "$parent_dir/$file" ]; then
+        current_mtime=$(date -r "$file" +%s)
+        parent_mtime=$(date -r "$parent_dir/$file" +%s)
+
+        if [ "$current_mtime" -gt "$parent_mtime" ]; then
+            echo "Copying $file"
+            cp "$file" "$parent_dir"
+        fi
+    else
+        echo "Copying $file"
+        cp "$file" "$parent_dir"
+    fi
+done
