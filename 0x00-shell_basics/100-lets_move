@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in [:upper:]*; do [ -f "$file" ] && mv "$file" /tmp/u
+[:upper:]* > mv /tmp/u
