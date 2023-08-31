@@ -1,2 +1,2 @@
 #!/bin/bash
-current_dir=$(pwd); parent_dir=$(dirname "$current_dir"); for file in *.html; do [ -f "$parent_dir/$file" ] |  [ $(date -r "$file" +%s) -gt $(date -r "$parent_dir/$file" +%s) ] | cp "$file" "$parent_dir"; [ ! -f "$parent_dir/$file" ] | cp "$file" "$parent_dir"; done
+cp -u*.html
