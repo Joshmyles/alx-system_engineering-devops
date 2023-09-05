@@ -1,2 +1,2 @@
 #!/bin/bash
-sort | uniq -c | grep -E '^\s*1' | cut -c 8- | sort
+sort | uniq -u
