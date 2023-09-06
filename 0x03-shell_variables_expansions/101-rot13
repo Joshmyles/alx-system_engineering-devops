@@ -1,1 +1,2 @@
 #!/bin/bash
+echo "$TEXT" | tr 'a-zA-Z' 'n-za-mN-ZA-M'

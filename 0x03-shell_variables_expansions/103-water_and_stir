@@ -1,1 +1,2 @@
 #!/bin/bash
+echo "ibase=water $WATER + stir obase=bestchol" | bc
