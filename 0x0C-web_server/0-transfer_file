@@ -20,7 +20,7 @@ echo "Error: File '$FILE_PATH' does not exist."
 exit 1
 fi
 
-scp -i "$SSH_KEY" -o StrictHostKeyChecking=no "$FILE_PATH" "$USERNAME@$SERVER_IP:~/"
+scp -i "$SSH_KEY" -o StrictHostKeyChecking=no "$FILE_PATH" "$USERNAME@$SERVER_IP":~/home
 
 if [ "$?" -eq 0 ]; then
 echo "File Transferred Successfully to $USERNAME@$SERVER_IP:~/"
