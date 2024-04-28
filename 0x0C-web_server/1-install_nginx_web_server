@@ -4,24 +4,29 @@ apt-get update
 
 apt-get install -y nginx
 
-cat <<EOF > /etc/nginx/sites-available/default
+mkdir /var/www/trial
+
+cat <<EOF > /var/www/trial/index.html
+Hello World!
+EOF
+
+#touch /etc/nginx/sites-available/trial
+
+cat <<EOF > /etc/nginx/sites-available/trial
 server {
 listen 80 default_server;
-listen[::]:80 default_server;
+# listen [::]:80;
 
-root /var/www/html
-index index.html index.htm index.nginx-debian.html
+root /var/www/trial;
+index index.html;
 
-server_name _;
-
-location / {
-try_files \$uri \$uri/ = 404;
-}
-
-location = / {
-echo "Hello World!";
-}
+#server_name _;
+#location / {
+#try_files $uri $uri/ =404;
+#}
 }
 EOF
+
+ln -s /etc/nginx/sites-available/trial /etc/nginx/sites-enabled/trial
 
 /etc/init.d/nginx restart
