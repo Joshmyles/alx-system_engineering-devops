@@ -1,0 +1,37 @@
+#!/bin/bash
+
+apt-get update
+
+apt-get install -y nginx
+
+mkdir /var/www/trial
+
+cat <<EOF > /var/www/trial/index.html
+Hello World!
+EOF
+
+#touch /etc/nginx/sites-available/trial
+
+cat <<EOF > /etc/nginx/sites-available/trial
+server {
+listen 80 default_server;
+listen [::]:80;
+
+root /var/www/trial;
+index index.html;
+
+add_header X-Served-By 530227-web-02;
+
+#server_name _;
+#location / {
+#try_files $uri $uri/ =404;
+#}
+}
+EOF
+
+rm -rf /etc/nginx/sites-enabled/default
+
+ln -s /etc/nginx/sites-available/trial /etc/nginx/sites-enabled/trial
+
+/etc/init.d/nginx restart
+
