@@ -3,7 +3,7 @@
 # script that displays Best School 10 times
 # must use for loop (other loops forbiddent)
 
-for (( i=1; i<=10; i++ ))
+for ($i -le 10 ))
 do
 	echo "Best School"
 done
