@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
 # script that displays Best School 10 times
-# must use for loop (other loops forbiddent)
+# must use until loop
 
-for i in {1..10}
+i="0"
+
+until [ $i -eq 10 ]
 do
 	echo "Best School"
+	i=$(( i+1 ))
 done
