@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
-
-# script that displays numbers from 1 to 20
-# displays 4 then bad luck from China for the 4th loop
-# displays 9 then bad luck from Japan for the 9th loop
-# displays 17 then bad luck from Italy for the 17th loop
-# must use while, case
-
+# script that displays numbers from 1 to 20, 4, bad luck from China 
+# 9, bad luck from Japan, 17, bad luck from Italy, use while, case
 count="0"
-
 while [ $count -le 20 ]
 do
 case $count in
