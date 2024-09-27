@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-
 # script that displays Best School 10 times
 # 9th iteration displays Best School then hi on a new line
 # must use while loop and if statement
-
 count="0"
-
 while [ $count -lt 10 ]
 do
 	echo "Best School"
