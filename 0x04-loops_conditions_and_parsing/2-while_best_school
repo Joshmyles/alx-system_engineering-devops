@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
-
 # a script that displays Best School 10 times
-# must use while loop
-
 i=0
-
 while [ $i -lt 10 ]
 do
 	echo "Best School"
