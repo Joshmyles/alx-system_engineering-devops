@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# script that displays numbers from 1 to 20, 4, bad luck from China 
-# 9, bad luck from Japan, 17, bad luck from Italy, use while, case
+# displays numbers from 1 to 20, 4, bad luck from China 
+# 9, bad luck from Japan, 17, bad luck from Italy, while, case
 count="0"
 while [ $count -le 20 ]
 do
@@ -14,8 +14,7 @@ case $count in
 	17) echo $count
 		echo "bad luck from Italy"
 	;;
-	*)	
-		echo $count
+	*) echo $count
 esac
 (( count++ ))
 done
