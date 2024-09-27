@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# Master the art of parsing log files. 
-# the customer support department reported that a user reported that the site is being buggy. Not being # a detailed description, you want to have a look at the Apache logs and gather data about the traffic
-# write a script that displays the visitor IP along with the HTTP status code from the Apache log file
-# format: IP HTTP_CODE, in a list format
-# must use awk, not allowed to use while, for, until and cut
-
-awk '{print $1 " " $9}' apache-access.log
